@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="contact-info">
+            <span><i class="fas fa-phone"></i> 0537 600 69 32</span>
+            <span><i class="fas fa-map-marker-alt"></i> İvedik Mah. 1323. Cad. No:2 Yenimahalle/ANKARA</span>
+            <span><i class="fas fa-envelope"></i> info@ankaralastik.com.tr</span>
+        </div>
+        <div class="social-media">
+            <span>Sosyal Medya:</span>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+        </div>
+    </div>
+    <header class="header">
+        <h1>Logo</h1>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Information</a></li>
+            <li><a href="#">Service</a></li>
+        </ul>
+        <span class="menu-btn" onclick="openSidebar()">&#9776;</span>
+    </header>
+    <div class="sidebar" id="sidebar">
+        <span class="close-btn" onclick="closeSidebar()">&times;</span>
+        <a href="#">Home</a>
+        <a href="#">Gallery</a>
+        <a href="#">Information</a>
+        <a href="#">Service</a>
+    </div>
+
+
+
+    <div class="slider">
+        <div class="carousel" data-flickity='{"wrapAround": true, "autoPlay": 3000}'>
+            <div class="carousel-cell"><img src="image1.png" alt="Image 1"></div>
+            <div class="carousel-cell"><img src="image1.png" alt="Image 2"></div>
+        </div>
+    </div>
+
+
+    <script>
+        function openSidebar() {
+            document.getElementById("sidebar").style.right = "0";
+        }
+        function closeSidebar() {
+            document.getElementById("sidebar").style.right = "-250px";
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
+</body>
+</body>
+</html>
