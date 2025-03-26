@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="style.css">
+        <title>Anasayfa</title>
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css">
     </head>
+
     <body>
         <div class="top-bar">
             <div class="contact-info">
@@ -24,38 +25,29 @@
                 <a href="#"><i class="fab fa-whatsapp contact-whatsapp"></i></a>
             </div>
         </div>
-        <header class="header">
-            <h1>Logo</h1>
-            <ul class="nav-links">
-                <li><a href="index.html">Anasayfa</a></li>
 
-                <!-- Dropdown için eklenen kısım -->
-                <li class="dropdown">
-                    <a href="">Hizmetlerimiz <i class="fas fa-caret-down"></i></a>
-                    <ul class="dropdown-content">
-                        <li><a >Yol Yardım</a></li>
-                        <li><a >Lastik Tamiri</a></li>
-                        <li><a >Akü Takviye</a></li>
-                    </ul>
-                </li>
-                
-                <li><a href="information.html">Hakkımızda</a></li>
-                <li><a href="contact.html">İletişim</a></li>
-            </ul>
-            <span class="menu-btn" onclick="openSidebar()">&#9776;</span>
-        </header>
+        <header class="header">
+          <h1>Logo</h1>
+          <ul class="nav-links">
+              <li><a href="index.html">Anasayfa</a></li>
+              <li><a href="services.html">Hizmetlerimiz</a></li>                
+              <li><a href="information.html">Hakkımızda</a></li>
+              <li><a href="contact.html">İletişim</a></li>
+          </ul>
+          <span class="menu-btn" onclick="openSidebar()">&#9776;</span>
+      </header>
 
         <div class="sidebar" id="sidebar">
             <span class="close-btn" onclick="closeSidebar()">&times;</span>
             <a href="index.html">Anasayfa</a>
             <div class="dropdown">
                 <a class="dropdown-toggle">
-                    Hizmetlerimiz <i class="fas fa-chevron-down arrow-icon"></i>
+                    Hizmetlerimiz &nbsp; <i class="fas fa-chevron-down arrow-icon"></i>
                 </a>
                 <ul class="sidebar-dropdown">
-                    <li><a href="yol-yardim.html">Yol Yardım</a></li>
-                    <li><a href="lastik-tamiri.html">Lastik Tamiri</a></li>
-                    <li><a href="aku-takviye.html">Akü Takviye</a></li>
+                    <li><a href="road-assistance.html">Yol Yardım</a></li>
+                    <li><a href="tire-change.html">Lastik Tamiri</a></li>
+                    <li><a href="battery-change.html">Akü Takviye</a></li>
                 </ul>
             </div>
             <a href="information.html">Hakkımızda</a>
@@ -64,114 +56,128 @@
 
         <div class="slider">
             <div class="carousel" data-flickity='{"wrapAround": true, "autoPlay": 3000}'>
-                <div class="carousel-cell"><img src="image1.png" alt="Image 1"></div>
-                <div class="carousel-cell"><img src="image1.png" alt="Image 2"></div>
+                <div class="carousel-cell"><img src="assets/images/image1.png" alt="Image 1"></div>
+                <div class="carousel-cell"><img src="assets/images/image1.png" alt="Image 2"></div>
             </div>
         </div>
 
         <!-- Hizmetler Bölümü -->
         <section class="services-section" aria-labelledby="services-title">
-          <h1 id="services-title">Hizmetlerimiz</h1>
           <div class="services-grid">
             <article class="service-card">
-              <figure class="service-image">
-                <img src="araba.png" alt="7/24 Yol Yardım Hizmeti">
-              </figure>
-              <h2>7/24 Yol Yardım</h2>
-              <p>
-                Aracınız hasar veya yolda kalma durumlarında 7/24 yanınızdayız. Yol yardım hizmeti için bizi arayabilirsiniz.
-              </p>
+              <a href="road-assistance.html">
+                <figure class="service-image">
+                  <img src="assets/images/araba.png" alt="7/24 Yol Yardım Hizmeti">
+                </figure>
+                <h2>7/24 Yol Yardım</h2>
+                <p>
+                  Aracınız hasar veya yolda kalma durumlarında 7/24 yanınızdayız. Yol yardım hizmeti için bizi arayabilirsiniz.
+                </p>
+              </a>
             </article>
+
             <article class="service-card">
-              <figure class="service-image">
-                <img src="lastik.png" alt="Mobil Lastik Tamiri Hizmeti">
-              </figure>
-              <h2>Mobil Lastik Tamiri</h2>
-              <p>
-                Aracınız yolda kalmasın! Mobil lastik servisimizle bulunduğunuz yere gelip hızlıca çözüm sağlıyoruz.
-              </p>
+              <a href="tire-repair.html">
+                <figure class="service-image">
+                  <img src="assets/images/lastik.png" alt="Mobil Lastik Tamiri Hizmeti">
+                </figure>
+                <h2>Mobil Lastik Tamiri</h2>
+                <p>
+                  Aracınız yolda kalmasın! Mobil lastik servisimizle bulunduğunuz yere gelip hızlıca çözüm sağlıyoruz.
+                </p>
+              </a>
             </article>
+
             <article class="service-card">
-              <figure class="service-image">
-                <img src="lastik-change.png" alt="Lastik Değişim ve Onarım Hizmeti">
-              </figure>
-              <h2>Lastik Değişim &amp; Onarım</h2>
-              <p>
-                Lastik arızalarında veya değişim ihtiyacında 7/24 servis veriyoruz. Güvenliğiniz için en iyi çözümleri sunuyoruz.
-              </p>
+              <a href="tire-change.html">
+                <figure class="service-image">
+                  <img src="assets/images/lastik-change.png" alt="Lastik Değişim ve Onarım Hizmeti">
+                </figure>
+                <h2>Lastik Değişim &amp; Onarım</h2>
+                <p>
+                  Lastik arızalarında veya değişim ihtiyacında 7/24 servis veriyoruz. Güvenliğiniz için en iyi çözümleri sunuyoruz.
+                </p>
+              </a>
             </article>
+
             <article class="service-card">
-              <figure class="service-image">
-                <img src="akü.png" alt="Akü Takviye ve Değişim Hizmeti">
-              </figure>
-              <h2>Akü Takviye &amp; Değişim</h2>
-              <p>
-                Aracınızın aküsü mü bitti? Hızlı akü takviye ve akü değişim servisimizle yolda kalmayın.
-              </p>
+              <a href="battery-change.html">
+                <figure class="service-image">
+                  <img src="assets/images/akü.png" alt="Akü Takviye ve Değişim Hizmeti">
+                </figure>
+                <h2>Akü Takviye &amp; Değişim</h2>
+                <p>
+                  Aracınızın aküsü mü bitti? Hızlı akü takviye ve akü değişim servisimizle yolda kalmayın.
+                </p>
+              </a>         
             </article>
+
           </div>
         </section>
         <!-- Hizmetler Bölümü -->
 
+        <!-- Hakkımızda Bölümü -->
+        <section class="about-us-section" aria-labelledby="about-us-title">
+          <!-- Genel Açıklama -->
+          <article class="about-us-detail">
+              <p>
+                  Ankara ve çevresinde 7/24 mobil yol yardım hizmeti sunan firmamız, 
+                  araç sahiplerinin karşılaştığı her türlü acil durum ve beklenmedik aksaklık 
+                  anında yanınızda olmaktadır. Uzman ekibimiz, yılların getirdiği deneyim ve 
+                  bilgi birikimi ile donanımlı olup, yolda karşılaşabileceğiniz her türlü 
+                  problemi en kısa sürede çözmeye odaklanmıştır.
+              </p>
+          </article>
+        </section>        
+        <!-- Hakkımızda Bölümü Bitişi -->
 
-
-
-
-
+        <!-- Footer Bölümü -->
         <footer class="footer">
-            <div class="footer-container">
-        
-              <!-- Logo & Açıklama -->
-              <div class="footer-column">
-                <img src="https://i.ibb.co/7gK6V2k/logo.png" alt="Logo" class="footer-logo">
-                <p><strong>Oto lastik tamiri, mobil yol yardım ve akü takviye</strong> hizmetleriyle Ankara'nın tüm ilçelerine faaliyet göstermekteyiz.</p>
-              </div>
-        
-              <!-- Lastik Hizmetleri -->
-              <div class="footer-column hide-on-mobile">
-                <h3>Lastik Hizmetlerimiz</h3>
-                <ul>
-                  <li>Lastik Tamircisi</li>
-                  <li>En Yakın Lastikçi</li>
-                  <li>7/24 Mobil Lastikçi</li>
-                  <li>Acil Lastik Tamircisi</li>
-                  <li>Konuma Yakın Lastikçi</li>
-                  <li>Mobil Yol Yardım Servisi</li>
-                </ul>
-              </div>
-        
-              <!-- Akü Hizmetleri -->
-              <div class="footer-column hide-on-mobile">
-                <h3>Akü Hizmetlerimiz</h3>
-                <ul>
-                  <li>Akü Montaj</li>
-                  <li>Akü Takviye</li>
-                  <li>En Yakın Akücü</li>
-                  <li>Acil Akü Takviye</li>
-                  <li>7/24 Akü Takviye</li>
-                  <li>7/24 Mobil Yol Yardım</li>
-                </ul>
-              </div>
-        
-              <!-- İletişim -->
-              <div class="footer-column">
-                <h3>İletişim</h3>
-                <p class="contact-phone"><span class="contact-icon"><i class="fas fa-phone"></i></span> Hemen Arayın</p>
-                <p class="contact-whatsapp"><span class="contact-icon"><i class="fab fa-whatsapp"></i></span> Konum Gönder</p>
-              </div>
-        
+          <div class="footer-container">
+      
+            <!-- Logo & Açıklama -->
+            <div class="footer-column">
+              <img src="https://i.ibb.co/7gK6V2k/logo.png" alt="Logo" class="footer-logo">
+              <p><strong>Emir Oto</strong></p>
             </div>
-        
-            <!-- Alt Bilgi -->
-            <div class="footer-bottom">
-              Copyright 2025
+      
+            <!-- Kurumsal -->
+            <div class="footer-column hide-on-mobile">
+              <h3>Kurumsal</h3>
+              <ul>
+                <li><a href="information.html">Hakkımızda</a></li>
+              </ul>
             </div>
-          </footer>
+      
+            <!-- Hizmetlerimiz -->
+            <div class="footer-column hide-on-mobile">
+              <h3>Hizmetlerimiz</h3>
+              <ul>
+                <li><a href="road-assistance.html">7/24 Yol Yardım</a></li>
+                <li><a href="tire-repair.html">Mobil Lastik Tamiri</a></li>
+                <li><a href="tire-change.html">Lastik Değişim & Onarım</a></li>
+                <li><a href="battery-change.html">Akü Takviye & Değişim</a></li>
+              </ul>
+            </div>
+      
+            <!-- İletişim -->
+            <div class="footer-column">
+              <h3>İletişim</h3>
+              <p class="contact-phone"><span class="contact-icon"><i class="fas fa-phone"></i></span>Hemen Arayın</p>
+              <p class="contact-whatsapp"><span class="contact-icon"><i class="fab fa-whatsapp"></i></span>Konum Gönder</p>
+            </div>
+      
+          </div>
+      
+          <!-- Alt Bilgi -->
+          <div class="footer-bottom">
+            Copyright 2025
+          </div>
+        </footer>
+        <!-- Footer Bölümü Bitişi -->
         
-          <!-- Yukarı Çık Butonu -->
-          <div class="up-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</div>
-
-
+        <!-- Yukarı Çık Butonu -->
+        <div class="up-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</div>
 
         <script>
             function openSidebar() {
@@ -181,74 +187,78 @@
                 document.getElementById("sidebar").style.right = "-250px";
             }
         </script>
-           <script>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('scroll', function() {
+                const footer = document.querySelector('.services-section');
+                const upButton = document.querySelector('.up-button');
+                
+                const footerRect = footer.getBoundingClientRect();
+                
+                // Check if the footer is in the viewport
+                if (footerRect.top <= window.innerHeight && footerRect.bottom >= 0) {
+                    upButton.classList.add('visible'); // Show the button
+                } else {
+                    upButton.classList.remove('visible'); // Hide the button
+                }
+            });
+        });
+        </script>
+
+        <script>
             document.addEventListener('DOMContentLoaded', function() {
-                window.addEventListener('scroll', function() {
-                    const footer = document.querySelector('.services-section');
-                    const upButton = document.querySelector('.up-button');
+                const phoneElements = document.querySelectorAll('.contact-phone');
+                const whatsappElements = document.querySelectorAll('.contact-whatsapp');
+        
+                // Phone click event for each phone element
+                phoneElements.forEach(function(phoneElement) {
+                    phoneElement.addEventListener('click', function() {
+                        window.location.href = 'tel:+905376006932'; // Replace with your phone number
+                    });
+                });
+        
+                // WhatsApp click event for each WhatsApp element
+                whatsappElements.forEach(function(whatsappElement) {
+                    whatsappElement.addEventListener('click', function() {
+                        const phoneNumber = '+905376006932'; // Replace with your WhatsApp number
+                        const message = 'Merhaba, yardım almak istiyorum!'; // Default message
+                        window.location.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                    });
+                });
+            });
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const dropdownToggle = document.querySelector('.dropdown-toggle');
+                const dropdownContent = document.querySelector('.sidebar-dropdown');
+                const dropdown = dropdownToggle.parentElement; // Get the parent dropdown div
+        
+                dropdownToggle.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent the default anchor behavior
                     
-                    const footerRect = footer.getBoundingClientRect();
-                    
-                    // Check if the footer is in the viewport
-                    if (footerRect.top <= window.innerHeight && footerRect.bottom >= 0) {
-                        upButton.classList.add('visible'); // Show the button
+                    // Check if the dropdown is currently visible
+                    if (dropdownContent.classList.contains('visible')) {
+                        // If it is visible, remove the visible class
+                        dropdownContent.classList.remove('visible');
+                        dropdown.classList.remove('open'); // Remove the open class
+                        // Wait for the transition to finish before setting display to none
+                        setTimeout(() => {
+                            dropdownContent.style.display = 'none'; // Set display to none after animation
+                        }, 500); // Match this duration with the CSS transition duration
                     } else {
-                        upButton.classList.remove('visible'); // Hide the button
+                        // If it is not visible, set display to block and add the visible class
+                        dropdownContent.style.display = 'block'; // Set display to block
+                        setTimeout(() => {
+                            dropdownContent.classList.add('visible'); // Add the visible class to trigger animation
+                            dropdown.classList.add('open'); // Add the open class to rotate the icon
+                        }, 10); // Small timeout to allow display to take effect
                     }
                 });
             });
         </script>
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    const phoneElements = document.querySelectorAll('.contact-phone');
-                    const whatsappElements = document.querySelectorAll('.contact-whatsapp');
-            
-                    // Phone click event for each phone element
-                    phoneElements.forEach(function(phoneElement) {
-                        phoneElement.addEventListener('click', function() {
-                            window.location.href = 'tel:+905376006932'; // Replace with your phone number
-                        });
-                    });
-            
-                    // WhatsApp click event for each WhatsApp element
-                    whatsappElements.forEach(function(whatsappElement) {
-                        whatsappElement.addEventListener('click', function() {
-                            const phoneNumber = '+905376006932'; // Replace with your WhatsApp number
-                            const message = 'Merhaba, yardım almak istiyorum!'; // Default message
-                            window.location.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                        });
-                    });
-                });
-            </script>
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    const dropdownToggle = document.querySelector('.dropdown-toggle');
-                    const dropdownContent = document.querySelector('.sidebar-dropdown');
-                    const dropdown = dropdownToggle.parentElement; // Get the parent dropdown div
-            
-                    dropdownToggle.addEventListener('click', function(event) {
-                        event.preventDefault(); // Prevent the default anchor behavior
-                        
-                        // Check if the dropdown is currently visible
-                        if (dropdownContent.classList.contains('visible')) {
-                            // If it is visible, remove the visible class
-                            dropdownContent.classList.remove('visible');
-                            dropdown.classList.remove('open'); // Remove the open class
-                            // Wait for the transition to finish before setting display to none
-                            setTimeout(() => {
-                                dropdownContent.style.display = 'none'; // Set display to none after animation
-                            }, 500); // Match this duration with the CSS transition duration
-                        } else {
-                            // If it is not visible, set display to block and add the visible class
-                            dropdownContent.style.display = 'block'; // Set display to block
-                            setTimeout(() => {
-                                dropdownContent.classList.add('visible'); // Add the visible class to trigger animation
-                                dropdown.classList.add('open'); // Add the open class to rotate the icon
-                            }, 10); // Small timeout to allow display to take effect
-                        }
-                    });
-                });
-            </script>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
     </body>
 </html>

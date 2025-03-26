@@ -1,0 +1,121 @@
+.map{
+    width: 100%;
+}
+iframe{
+    width: 100%;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch; /* YÜKSEKLİKLERİ EŞİTLE */
+  }
+  
+  .info-section, .form-section {
+    flex: 1 1 400px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f9f9f9; /* örnek arka plan (isteğe bağlı) */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .service-list {
+    margin: 20px 0;
+    padding: 0;
+  }
+  
+  .service-item {
+    list-style: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .icon-wrapper {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .service-icon {
+    width: 100px;
+  }
+  
+  .call-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+  .highlight {
+    color: #8b0000;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  
+  .call-button {
+    display: inline-block;
+    background-color: #5e1c1c;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .call-button:hover {
+    background-color: #3e0f0f;
+  }
+  
+  .contact-form {
+    width: 100%;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .submit-button {
+    background-color: #5e1c1c;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #3e0f0f;
+  }
+  .left-side{
+    display: flex;
+    justify-content: space-between;
+  }

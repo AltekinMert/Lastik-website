@@ -3,9 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>İletişim</title>
+        <title>Mobil Lastik Tamiri</title>
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/contact.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css">
     </head>
@@ -31,7 +30,7 @@
             <h1>Logo</h1>
             <ul class="nav-links">
                 <li><a href="index.html">Anasayfa</a></li>
-                <li><a href="services.html">Hizmetlerimiz</a></li>                
+                <li><a href="services.html">Hizmetlerimiz</a></li>
                 <li><a href="information.html">Hakkımızda</a></li>
                 <li><a href="contact.html">İletişim</a></li>
             </ul>
@@ -41,70 +40,34 @@
         <div class="sidebar" id="sidebar">
             <span class="close-btn" onclick="closeSidebar()">&times;</span>
             <a href="index.html">Anasayfa</a>
-            <div class="dropdown">
-                <a class="dropdown-toggle">Hizmetlerimiz</a>
-                <ul class="sidebar-dropdown">
-                    <li><a >Yol Yardım</a></li>
-                    <li><a >Lastik Tamiri</a></li>
-                    <li><a >Akü Takviye</a></li>
-                </ul>
-            </div>
+            <a href="services.html">Hizmetlerimiz</a>
             <a href="information.html">Hakkımızda</a>
             <a href="contact.html">İletişim</a>
         </div>
 
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195884.30042989203!2d32.59795474475844!3d39.903523298358856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d347d520732db1%3A0xbdc57b0c0842b8d!2sAnkara!5e0!3m2!1str!2str!4v1742898188697!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="slider">
+            <div class="carousel" data-flickity='{"wrapAround": true, "autoPlay": 3000}'>
+                <div class="carousel-cell"><img class="scale-down" src="assets/images/lastik.png" alt="Image 1"></div>
+                <div class="carousel-cell"><img class="scale-down" src="assets/images/lastik.png" alt="Image 2"></div>
+            </div>
         </div>
 
-        <!-- Mail -->
-        <div class="container">
-            <!-- SOL BLOK -->
-            <div class="info-section">
-              <h2 class="title">ANKARA TÜM İLÇELERİNE SERVİS HİZMETİ</h2>
-              <div class="left-side">
-                <ul class="service-list">
-                    <li class="service-item">* OTO YOL YARDIM</li>
-                    <li class="service-item">* MOBİL LASTİKÇİ</li>
-                    <li class="service-item">* AKÜ TAKVİYE</li>
-                    <li class="service-item">* LASTİK DEĞİŞİMİ</li>
-                    <li class="service-item">* YERİNDE HİZMET</li>
-                  </ul>
-                <div class="icon-wrapper" style="align-content: center;">
-                    <i class="fa-solid fa-phone-volume" style=" font-size: clamp(5rem, 20vw, 8rem);
-                                                                transform: rotate(335deg) translateY(-1vw);"></i>
-                  </div>
-              </div>
-              <p class="call-text">7/24 KESİNTİSİZ HİZMET İÇİN <span class="highlight">HEMEN ARAYIN</span></p>
-              <p class="description">
-                Bizi arayarak Mobil Yol Yardım aracımızı bulunduğunuz konuma yönlendirip aracınızın arızalarını kısa sürede çözüme kavuşturalım.
-              </p>
-              <a href="tel:+90XXXXXXXXXX" class="call-button"><i class="fas fa-phone"></i> HEMEN ARAYIN</a>
-            </div>
-        
-            <!-- SAĞ BLOK (FORM) -->
-            <div class="form-section">
-              <form class="contact-form">
-                <div class="form-group">
-                  <label for="name" class="form-label">Adınız (gerekli)</label>
-                  <input type="text" id="name" class="form-input" required>
-                </div>
-                <div class="form-group">
-                  <label for="email" class="form-label">E-posta adresiniz (gerekli)</label>
-                  <input type="email" id="email" class="form-input" required>
-                </div>
-                <div class="form-group">
-                  <label for="subject" class="form-label">Konu</label>
-                  <input type="text" id="subject" class="form-input">
-                </div>
-                <div class="form-group">
-                  <label for="message" class="form-label">İletiniz</label>
-                  <textarea id="message" rows="6" class="form-textarea"></textarea>
-                </div>
-                <button type="submit" class="submit-button">GÖNDER</button>
-              </form>
-            </div>
-          </div>
+        <!-- Hizmet Detayı Bölümü -->
+        <section class="service-details-section" aria-labelledby="service-details-title">
+            <!-- Mobil Lastik Tamiri -->
+            <h2 id="service-details-title">Mobil Lastik Tamiri</h2>
+            <br>
+            
+            <p itemprop="description">
+                Seyir halindeyken lastik patlaması veya hasarı yaşadığınızda, mobil ekibimiz
+                vakit kaybetmeden yanınıza gelir. Yedek lastik değişimi, lastik onarımı ve
+                hava kontrolü gibi işlemleri yerinde gerçekleştirerek sizi en kısa sürede
+                tekrar yola çıkmaya hazır hale getiririz.
+            </p>
+            </article>
+            <br> 
+        </section>
+        <!-- Hizmet Detayı Bölümü Bitişi -->
 
         <!-- Footer Bölümü -->
         <footer class="footer">
@@ -164,44 +127,44 @@
         </script>
 
         <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            window.addEventListener('scroll', function() {
-                const footer = document.querySelector('.services-section');
-                const upButton = document.querySelector('.up-button');
-                
-                const footerRect = footer.getBoundingClientRect();
-                
-                // Check if the footer is in the viewport
-                if (footerRect.top <= window.innerHeight && footerRect.bottom >= 0) {
-                    upButton.classList.add('visible'); // Show the button
-                } else {
-                    upButton.classList.remove('visible'); // Hide the button
-                }
+            document.addEventListener('DOMContentLoaded', function() {
+                window.addEventListener('scroll', function() {
+                    const footer = document.querySelector('.services-section');
+                    const upButton = document.querySelector('.up-button');
+                    
+                    const footerRect = footer.getBoundingClientRect();
+                    
+                    // Check if the footer is in the viewport
+                    if (footerRect.top <= window.innerHeight && footerRect.bottom >= 0) {
+                        upButton.classList.add('visible'); // Show the button
+                    } else {
+                        upButton.classList.remove('visible'); // Hide the button
+                    }
+                });
             });
-        });
         </script>
 
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const phoneElements = document.querySelectorAll('.contact-phone');
-                const whatsappElements = document.querySelectorAll('.contact-whatsapp');
-        
-                // Phone click event for each phone element
-                phoneElements.forEach(function(phoneElement) {
-                    phoneElement.addEventListener('click', function() {
-                        window.location.href = 'tel:+905376006932'; // Replace with your phone number
+                document.addEventListener('DOMContentLoaded', function() {
+                    const phoneElements = document.querySelectorAll('.contact-phone');
+                    const whatsappElements = document.querySelectorAll('.contact-whatsapp');
+            
+                    // Phone click event for each phone element
+                    phoneElements.forEach(function(phoneElement) {
+                        phoneElement.addEventListener('click', function() {
+                            window.location.href = 'tel:+905376006932'; // Replace with your phone number
+                        });
+                    });
+            
+                    // WhatsApp click event for each WhatsApp element
+                    whatsappElements.forEach(function(whatsappElement) {
+                        whatsappElement.addEventListener('click', function() {
+                            const phoneNumber = '+905376006932'; // Replace with your WhatsApp number
+                            const message = 'Merhaba, yardım almak istiyorum!'; // Default message
+                            window.location.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                        });
                     });
                 });
-        
-                // WhatsApp click event for each WhatsApp element
-                whatsappElements.forEach(function(whatsappElement) {
-                    whatsappElement.addEventListener('click', function() {
-                        const phoneNumber = '+905376006932'; // Replace with your WhatsApp number
-                        const message = 'Merhaba, yardım almak istiyorum!'; // Default message
-                        window.location.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                    });
-                });
-            });
         </script>
 
         <script>
@@ -233,7 +196,7 @@
                 });
             });
         </script>
-        
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
     </body>
 </html>

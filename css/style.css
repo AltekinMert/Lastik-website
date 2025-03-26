@@ -1,0 +1,581 @@
+/* Genel Sıfırlama */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Üst Bilgi (Top Bar) */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e1ad21;
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.top-bar .contact-info {
+    display: flex;
+    gap: 15px;
+}
+
+.top-bar .contact-info i {
+    margin-right: 5px;
+}
+
+.top-bar .social-media {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-bar .social-media a {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Başlık (Header) ve Navigasyon */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #000000;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Kenar Çekme Menüsü (Sidebar) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: #000000;
+    padding-top: 60px;
+    transition: 0.3s;
+    z-index: 9999;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar a:hover {
+    background: #555;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mobil Uyumlu Header ve Top Bar */
+@media (max-width: 768px) {
+    .nav-links,
+    .top-bar .contact-info {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .top-bar {
+        place-content: center;
+    }
+    .flickity-button{
+        display: none !important;
+    }
+}
+
+/* Slider / Carousel */
+.slider {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+.carousel {
+    width: 100%;
+}
+
+.carousel-cell {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Maintains a responsive aspect ratio */
+}
+
+.carousel-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+}
+
+/* Hizmetler Bölümü (Grid) */
+.services-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-section h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-image {
+    margin-bottom: 15px;
+}
+
+.service-image img {
+    max-width: 80px;
+    height: auto;
+}
+
+.service-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Dropdown (Hizmetlerimiz menüsü) */
+.dropdown {
+    position: relative; /* Alt menüyü konumlandırabilmek için */
+}
+
+.dropdown-content {
+    display: none; /* İlk başta gizli */
+    position: absolute;
+    top: 100%; /* Parent (Hizmetlerimiz linki) yüksekliği kadar yukarıdan */
+    left: 0;
+    background-color: #fff;
+    min-width: 150px; /* Alt menü genişliği */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    z-index: 9999;
+}
+
+.dropdown-content li {
+    list-style: none;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-content li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Fareyle Hizmetlerimiz (dropdown) üzerine gelince açılır menü gösterimi */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 20px; /* Okun soldan uzaklığı */
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff; /* Okun rengi (background ile aynı) */
+}
+
+/* Flickity Dot Ayarları */
+.slider {
+    width: 100%;
+    position: relative;
+}
+.carousel {
+    width: 100%;
+}
+.carousel-cell {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Keeps a responsive aspect ratio */
+    max-height: 90vh; 
+    object-position: top;
+}
+.carousel-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.flickity-page-dots {
+    transform: translateY(-6vh);
+}
+.flickity-page-dots .dot {
+    background: white !important;
+}
+
+/* Footer */
+.footer {
+    background-color: #4d1311;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1 1 220px;
+    margin: 20px;
+}
+
+.footer-column h3 {
+    border-bottom: 2px solid white;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+.footer-column ul li::before {
+    content: "➜";
+    margin-right: 8px;
+}
+
+.footer-logo {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin: 0 0 10px;
+    line-height: 1.5;
+}
+
+.contact-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #8c3c3c;
+    padding: 15px;
+    font-size: 14px;
+    background-color: #3d0e0c;
+}
+
+/* Yukarı Çık Butonu */
+.up-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f5f5f5;
+    color: rgb(0, 0, 0);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0; /* Başlangıçta görünmez */
+    transform: translateY(20px); /* 20px aşağıdan başlasın */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    visibility: hidden;
+}
+.up-button.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* Mobilde Gizlenmesi İstenen Öğeler */
+@media (max-width: 768px) {
+    .hide-on-mobile {
+        display: none;
+    }
+}
+
+/* Dropdown menü genişlik ve padding ayarları */
+.dropdown-content li a {
+    width: 200px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.dropdown-content {
+    padding: 15px;
+}
+
+/* Tıklanabilir Telefon & WhatsApp */
+.contact-phone:hover {
+    cursor: pointer;
+}
+.contact-whatsapp:hover {
+    cursor: pointer;
+}
+
+/* Sidebar İçerisindeki Dropdown */
+.sidebar-dropdown {
+    display: none; /* Başlangıçta gizli */
+    opacity: 0; /* Görünürlük 0 */
+    transform: translateX(-20px); /* Soldan 20px içeride */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.sidebar-dropdown.visible {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+.sidebar-dropdown {
+    list-style-type: none;
+}
+.arrow-icon {
+    transition: transform 0.3s ease;
+}
+.dropdown.open .arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* ------------------------------------------------ */
+/* Hizmet Detayları Bölümü (Paragraflar - services.html) */
+/* ------------------------------------------------ */
+
+.service-details-section {
+    max-width: 1200px;   /* İçeriğin genişliğini masaüstünde sınırlıyoruz */
+    margin: 40px auto;   /* Ortalayarak üst-alt boşluk veriyoruz */
+    padding: 0 1rem;     /* Kenarlardan genel boşluk (mobilde de işe yarar) */
+}
+
+.service-details-section h2 {
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.service-detail {
+    margin-bottom: 2rem; /* Makul alt boşluk */
+}
+
+.service-detail header h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #000;
+}
+
+.service-detail p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .service-details-section h2 {
+        font-size: 1.5rem;
+    }
+    .service-detail header h3 {
+        font-size: 1.1rem;
+    }
+    .service-detail p {
+        font-size: 0.95rem;
+    }
+}
+
+/* ------------------------------------------------ */
+/* Sadece services.html sayfasındaki kartları etkileyen kurallar */
+/* (services-section'a eklediğimiz ID = #services-page) */
+/* ------------------------------------------------ */
+
+/* Yalnızca #services-page altındaki .service-card öğeleri */
+#services-page .service-card {
+    min-height: 350px; /* Kartın minimum yüksekliği */
+}
+
+/* İsterseniz grid satırlarının yüksekliğini de bu sayfada kontrol edebilirsiniz */
+#services-page .services-grid {
+    /* min-height alternatifi
+    grid-auto-rows: minmax(350px, auto); 
+    ancak yukarıdaki min-height ile beraber kullanmayın */
+}
+
+/* services.html içindeki kutulardaki resimleri büyütmek için */
+#services-page .service-image img {
+    max-width: 250px; /* İstediğiniz piksel değerini ayarlayabilirsiniz (ör: 120, 150) */
+    height: auto;     /* Oranı korumak için height'i otomatik bırakın */
+}
+
+.service-card a {
+    display: block;           /* Tüm kart alanını kapsasın */
+    color: inherit;           /* Link metni, normal metin rengine bürünsün */
+    text-decoration: none;    /* Alt çizgi vb. istemiyorsanız kapatabilirsiniz */
+}
+
+.service-card a:hover {
+    /* Kullanıcı fareyi tüm karta getirdiğinde link hover efekti */
+    text-decoration: none;
+}
+
+/* ------------------------------------------- */
+/* Hakkımızda Bölümü Stilleri (about-us-section) */
+/* ------------------------------------------- */
+
+.about-us-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 1rem;
+}
+
+.about-us-section h2 {
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.about-us-detail {
+    margin-bottom: 2rem;
+}
+
+.about-us-detail header h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #000;
+}
+
+.about-us-detail p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+    .about-us-section h2 {
+        font-size: 1.5rem;
+    }
+    .about-us-detail header h3 {
+        font-size: 1.1rem;
+    }
+    .about-us-detail p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Misyon ve Vizyon Bölümleri Yan Yana Düzeni */
+.mission-vision-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.mission,
+.vision {
+    flex: 1; /* Her biri eşit genişlikte olsun */
+}
+
+.mission h3,
+.vision h3 {
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.mission p,
+.vision p {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive Ayarlar (Mobil cihazlar için) */
+@media (max-width: 768px) {
+    .mission-vision-container {
+        flex-direction: column; /* Mobilde alt alta gelsinler */
+    }
+
+    .mission,
+    .vision {
+        margin-bottom: 25px; /* Mobilde alt alta boşluk bırak */
+    }
+}
+.scale-down{
+    object-fit: contain !important;
+    scale: 0.8;
+}
