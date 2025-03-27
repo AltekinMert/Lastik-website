@@ -79,7 +79,7 @@ body {
     right: -250px;
     width: 250px;
     height: 100%;
-    background: #000000;
+    background: rgba(255,255,255,0.95);
     padding-top: 60px;
     transition: 0.3s;
     z-index: 9999;
@@ -88,22 +88,24 @@ body {
 .sidebar a {
     display: block;
     padding: 15px;
-    color: rgb(255, 255, 255);
+    color: rgba(102,102,102,0.85);
     text-decoration: none;
-    font-size: 20px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: rgb(180,177,177);
 }
 
 .sidebar a:hover {
-    background: #555;
+    background: #c4c4c4 !important;
 }
 
 .close-btn {
     position: absolute;
     top: 15px;
     right: 15px;
-    font-size: 25px;
+    font-size: 30px;
     cursor: pointer;
-    color: white;
+    color: black;
 }
 
 /* Mobil Uyumlu Header ve Top Bar */
@@ -357,6 +359,38 @@ body {
     transition: opacity 0.5s ease, transform 0.5s ease;
     visibility: hidden;
 }
+.whatsapp-button {
+    position: fixed;
+    bottom: 15vh;
+    right: 20px;
+    background-color: #25d366;
+    color: rgb(255, 255, 255);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    transform: translateY(20px); /* 20px aşağıdan başlasın */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.call-button {
+    position: fixed;
+    bottom: 23vh;
+    right: 20px;
+    background-color: #2a46b3;
+    color: rgb(255, 255, 255);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    transform: translateY(20px); /* 20px aşağıdan başlasın */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
 .up-button.visible {
     opacity: 1;
     transform: translateY(0);
@@ -578,4 +612,11 @@ body {
 .scale-down{
     object-fit: contain !important;
     scale: 0.8;
+}
+.sidebar-link{
+    place-items: center;
+    padding-top: 10vh !important;
+}
+.footer-column ul li a{
+    color: #d2e1ed;
 }

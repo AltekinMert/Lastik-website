@@ -11,47 +11,54 @@
     </head>
 
     <body>
-        <div class="top-bar">
-            <div class="contact-info">
-                <span><i class="fas fa-phone"></i> 0537 600 69 32</span>
-                <span><i class="fas fa-map-marker-alt"></i> İvedik Mah. 1323. Cad. No:2 Yenimahalle/ANKARA</span>
-                <span><i class="fas fa-envelope"></i> info@ankaralastik.com.tr</span>
-            </div>
-            <div class="social-media">
-                <span>Sosyal Medya:</span>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-telegram"></i></a>
-                <a href="#"><i class="fas fa-phone contact-phone"></i></a>
-                <a href="#"><i class="fab fa-whatsapp contact-whatsapp"></i></a>
-            </div>
+      
+      <div class="top-bar">
+        <div class="contact-info">
+            <span><i class="fas fa-phone"></i> 0537 600 69 32</span>
+            <span><i class="fas fa-map-marker-alt"></i> İvedik Mah. 1323. Cad. No:2 Yenimahalle/ANKARA</span>
+            <span><i class="fas fa-envelope"></i> info@ankaralastik.com.tr</span>
         </div>
+        <div class="social-media">
+            <span>Sosyal Medya:</span>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fas fa-phone contact-phone"></i></a>
+            <a href="#"><i class="fab fa-whatsapp contact-whatsapp"></i></a>
+        </div>
+    </div>
 
-        <header class="header">
-            <h1>Logo</h1>
-            <ul class="nav-links">
-                <li><a href="index.html">Anasayfa</a></li>
-                <li><a href="services.html">Hizmetlerimiz</a></li>                
-                <li><a href="information.html">Hakkımızda</a></li>
-                <li><a href="contact.html">İletişim</a></li>
+    <header class="header">
+      <h1>Logo</h1>
+      <ul class="nav-links">
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="services.html">Hizmetlerimiz</a></li>                
+          <li><a href="information.html">Hakkımızda</a></li>
+          <li><a href="contact.html">İletişim</a></li>
+      </ul>
+      <span class="menu-btn" onclick="openSidebar()">&#9776;</span>
+  </header>
+
+    <div class="sidebar" id="sidebar">
+        <span class="close-btn" onclick="closeSidebar()">&times;</span>
+        <a href="index.html">Anasayfa</a>
+        <div class="dropdown">
+            <a class="dropdown-toggle">
+                Hizmetlerimiz &nbsp; <i class="fas fa-chevron-down arrow-icon"></i>
+            </a>
+            <ul class="sidebar-dropdown">
+                <li><a href="road-assistance.html">Yol Yardım</a></li>
+                <li><a href="tire-change.html">Lastik Tamiri</a></li>
+                <li><a href="battery-change.html">Akü Takviye</a></li>
             </ul>
-            <span class="menu-btn" onclick="openSidebar()">&#9776;</span>
-        </header>
-
-        <div class="sidebar" id="sidebar">
-            <span class="close-btn" onclick="closeSidebar()">&times;</span>
-            <a href="index.html">Anasayfa</a>
-            <div class="dropdown">
-                <a class="dropdown-toggle">Hizmetlerimiz</a>
-                <ul class="sidebar-dropdown">
-                    <li><a >Yol Yardım</a></li>
-                    <li><a >Lastik Tamiri</a></li>
-                    <li><a >Akü Takviye</a></li>
-                </ul>
-            </div>
-            <a href="information.html">Hakkımızda</a>
-            <a href="contact.html">İletişim</a>
         </div>
+        <a href="information.html">Hakkımızda</a>
+        <a href="contact.html">İletişim</a>
+        <a class="sidebar-link contact-phone"><p><span class="contact-icon"><i class="fas fa-phone"></i></span>Hemen Arayın</p></a>
+        <a class="sidebar-link contact-whatsapp" style="border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: rgb(180, 177, 177);"><p><span class="contact-icon"><i class="fab fa-whatsapp"></i></span>Konum Gönder</p></a>
+    </div>
 
         <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195884.30042989203!2d32.59795474475844!3d39.903523298358856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d347d520732db1%3A0xbdc57b0c0842b8d!2sAnkara!5e0!3m2!1str!2str!4v1742898188697!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -79,9 +86,14 @@
               <p class="description">
                 Bizi arayarak Mobil Yol Yardım aracımızı bulunduğunuz konuma yönlendirip aracınızın arızalarını kısa sürede çözüme kavuşturalım.
               </p>
-              <a href="tel:+90XXXXXXXXXX" class="call-button"><i class="fas fa-phone"></i> HEMEN ARAYIN</a>
+              <a href="tel:+90XXXXXXXXXX" class="call-button-mail"><i class="fas fa-phone"></i> HEMEN ARAYIN</a>
+              <a class="call-button-mail contact-whatsapp" style="margin-top: 1vh; cursor: pointer;"><i class="fab fa-whatsapp"></i> WHATSAPP</a>
             </div>
-        
+
+            <!--Butonlar-->
+        <div class="up-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</div>
+        <div class="whatsapp-button contact-whatsapp"><i class="fab fa-whatsapp"></i></div>
+        <div class="call-button contact-phone"><i class="fas fa-phone"></i></div>
             <!-- SAĞ BLOK (FORM) -->
             <div class="form-section">
               <form class="contact-form">

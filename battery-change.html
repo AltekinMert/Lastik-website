@@ -27,22 +27,35 @@
         </div>
 
         <header class="header">
-            <h1>Logo</h1>
-            <ul class="nav-links">
-                <li><a href="index.html">Anasayfa</a></li>
-                <li><a href="services.html">Hizmetlerimiz</a></li>
-                <li><a href="information.html">Hakkımızda</a></li>
-                <li><a href="contact.html">İletişim</a></li>
-            </ul>
-            <span class="menu-btn" onclick="openSidebar()">&#9776;</span>
-        </header>
+          <h1>Logo</h1>
+          <ul class="nav-links">
+              <li><a href="index.html">Anasayfa</a></li>
+              <li><a href="services.html">Hizmetlerimiz</a></li>                
+              <li><a href="information.html">Hakkımızda</a></li>
+              <li><a href="contact.html">İletişim</a></li>
+          </ul>
+          <span class="menu-btn" onclick="openSidebar()">&#9776;</span>
+      </header>
 
         <div class="sidebar" id="sidebar">
             <span class="close-btn" onclick="closeSidebar()">&times;</span>
             <a href="index.html">Anasayfa</a>
-            <a href="services.html">Hizmetlerimiz</a>
+            <div class="dropdown">
+                <a class="dropdown-toggle">
+                    Hizmetlerimiz &nbsp; <i class="fas fa-chevron-down arrow-icon"></i>
+                </a>
+                <ul class="sidebar-dropdown">
+                    <li><a href="road-assistance.html">Yol Yardım</a></li>
+                    <li><a href="tire-change.html">Lastik Tamiri</a></li>
+                    <li><a href="battery-change.html">Akü Takviye</a></li>
+                </ul>
+            </div>
             <a href="information.html">Hakkımızda</a>
             <a href="contact.html">İletişim</a>
+            <a class="sidebar-link contact-phone"><p><span class="contact-icon"><i class="fas fa-phone"></i></span>Hemen Arayın</p></a>
+            <a class="sidebar-link contact-whatsapp" style="border-bottom-style: solid;
+            border-bottom-width: 1px;
+            border-bottom-color: rgb(180, 177, 177);"><p><span class="contact-icon"><i class="fab fa-whatsapp"></i></span>Konum Gönder</p></a>
         </div>
 
         <div class="slider">
@@ -51,6 +64,11 @@
                 <div class="carousel-cell"><img class="scale-down" src="assets/images/akü.png" alt="Image 2"></div>
             </div>
         </div>
+
+        <!--Butonlar-->
+        <div class="up-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</div>
+        <div class="whatsapp-button contact-whatsapp"><i class="fab fa-whatsapp"></i></div>
+        <div class="call-button contact-phone"><i class="fas fa-phone"></i></div>
 
         <!-- Hizmet Detayı Bölümü -->
         <section class="service-details-section" aria-labelledby="service-details-title">
