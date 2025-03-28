@@ -41,8 +41,8 @@
             <span class="close-btn" onclick="closeSidebar()">&times;</span>
             <a href="index.html">Anasayfa</a>
             <div class="dropdown">
-                <a class="dropdown-toggle">
-                    Hizmetlerimiz &nbsp; <i class="fas fa-chevron-down arrow-icon"></i>
+                <a class="dropdown-toggle" href="services.html">
+                    Hizmetlerimiz &nbsp;
                 </a>
                 <ul class="sidebar-dropdown">
                     <li><a href="road-assistance.html">Yol Yardım</a></li>
@@ -181,7 +181,7 @@
         <!-- Footer Bölümü Bitişi -->
         
         <!-- Yukarı Çık Butonu -->
-        <div class="up-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</div>
+        <div class="up-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"><i class="fa-solid fa-arrow-up"></i></div>
         <div class="whatsapp-button contact-whatsapp"><i class="fab fa-whatsapp"></i></div>
         <div class="call-button contact-phone"><i class="fas fa-phone"></i></div>
         <script>
@@ -230,36 +230,6 @@
                         const message = 'Merhaba, yardım almak istiyorum!'; // Default message
                         window.location.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
                     });
-                });
-            });
-        </script>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const dropdownToggle = document.querySelector('.dropdown-toggle');
-                const dropdownContent = document.querySelector('.sidebar-dropdown');
-                const dropdown = dropdownToggle.parentElement; // Get the parent dropdown div
-        
-                dropdownToggle.addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevent the default anchor behavior
-                    
-                    // Check if the dropdown is currently visible
-                    if (dropdownContent.classList.contains('visible')) {
-                        // If it is visible, remove the visible class
-                        dropdownContent.classList.remove('visible');
-                        dropdown.classList.remove('open'); // Remove the open class
-                        // Wait for the transition to finish before setting display to none
-                        setTimeout(() => {
-                            dropdownContent.style.display = 'none'; // Set display to none after animation
-                        }, 500); // Match this duration with the CSS transition duration
-                    } else {
-                        // If it is not visible, set display to block and add the visible class
-                        dropdownContent.style.display = 'block'; // Set display to block
-                        setTimeout(() => {
-                            dropdownContent.classList.add('visible'); // Add the visible class to trigger animation
-                            dropdown.classList.add('open'); // Add the open class to rotate the icon
-                        }, 10); // Small timeout to allow display to take effect
-                    }
                 });
             });
         </script>
