@@ -10,53 +10,10 @@
     </head>
 
     <body>
-        <div class="top-bar">
-            <div class="contact-info">
-                <span><i class="fas fa-phone"></i> 0537 600 69 32</span>
-                <span><i class="fas fa-map-marker-alt"></i> İvedik Mah. 1323. Cad. No:2 Yenimahalle/ANKARA</span>
-                <span><i class="fas fa-envelope"></i> info@ankaralastik.com.tr</span>
-            </div>
-            <div class="social-media">
-                <span>Sosyal Medya:</span>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-telegram"></i></a>
-                <a href="#"><i class="fas fa-phone contact-phone"></i></a>
-                <a href="#"><i class="fab fa-whatsapp contact-whatsapp"></i></a>
-            </div>
-        </div>
-
-        <header class="header">
-          <h1>Logo</h1>
-          <ul class="nav-links">
-              <li><a href="index.html">Anasayfa</a></li>
-              <li><a href="services.html">Hizmetlerimiz</a></li>                
-              <li><a href="information.html">Hakkımızda</a></li>
-              <li><a href="contact.html">İletişim</a></li>
-          </ul>
-          <span class="menu-btn" onclick="openSidebar()">&#9776;</span>
-      </header>
-
-        <div class="sidebar" id="sidebar">
-            <span class="close-btn" onclick="closeSidebar()">&times;</span>
-            <a href="index.html">Anasayfa</a>
-            <div class="dropdown">
-                <a class="dropdown-toggle" href="services.html">
-                    Hizmetlerimiz &nbsp;
-                </a>
-                <ul class="sidebar-dropdown">
-                    <li><a href="road-assistance.html">Yol Yardım</a></li>
-                    <li><a href="tire-change.html">Lastik Tamiri</a></li>
-                    <li><a href="battery-change.html">Akü Takviye</a></li>
-                </ul>
-            </div>
-            <a href="information.html">Hakkımızda</a>
-            <a href="contact.html">İletişim</a>
-            <a class="sidebar-link contact-phone"><p><span class="contact-icon"><i class="fas fa-phone"></i></span>Hemen Arayın</p></a>
-            <a class="sidebar-link contact-whatsapp" style="border-bottom-style: solid;
-            border-bottom-width: 1px;
-            border-bottom-color: rgb(180, 177, 177);"><p><span class="contact-icon"><i class="fab fa-whatsapp"></i></span>Konum Gönder</p></a>
-        </div>
+        <!-- Component placeholders -->
+        <div id="top-bar-container"></div>
+        <div id="header-container"></div>
+        <div id="sidebar-container"></div>
 
         <div class="slider">
             <div class="carousel" data-flickity='{"wrapAround": true, "autoPlay": 3000}'>
@@ -135,105 +92,11 @@
         </section>        
         <!-- Hakkımızda Bölümü Bitişi -->
 
-        <!-- Footer Bölümü -->
-        <footer class="footer">
-          <div class="footer-container">
-      
-            <!-- Logo & Açıklama -->
-            <div class="footer-column">
-              <img src="https://i.ibb.co/7gK6V2k/logo.png" alt="Logo" class="footer-logo">
-              <p><strong>Emir Oto</strong></p>
-            </div>
-      
-            <!-- Kurumsal -->
-            <div class="footer-column hide-on-mobile">
-              <h3>Kurumsal</h3>
-              <ul>
-                <li><a href="information.html">Hakkımızda</a></li>
-              </ul>
-            </div>
-      
-            <!-- Hizmetlerimiz -->
-            <div class="footer-column hide-on-mobile">
-              <h3>Hizmetlerimiz</h3>
-              <ul>
-                <li><a href="road-assistance.html">7/24 Yol Yardım</a></li>
-                <li><a href="tire-repair.html">Mobil Lastik Tamiri</a></li>
-                <li><a href="tire-change.html">Lastik Değişim & Onarım</a></li>
-                <li><a href="battery-change.html">Akü Takviye & Değişim</a></li>
-              </ul>
-            </div>
-      
-            <!-- İletişim -->
-            <div class="footer-column">
-              <h3>İletişim</h3>
-              <p class="contact-phone"><span class="contact-icon"><i class="fas fa-phone"></i></span>Hemen Arayın</p>
-              <p class="contact-whatsapp"><span class="contact-icon"><i class="fab fa-whatsapp"></i></span>Konum Gönder</p>
-            </div>
-      
-          </div>
-      
-          <!-- Alt Bilgi -->
-          <div class="footer-bottom">
-            Copyright 2025
-          </div>
-        </footer>
-        <!-- Footer Bölümü Bitişi -->
-        
-        <!-- Yukarı Çık Butonu -->
-        <div class="up-button" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"><i class="fa-solid fa-arrow-up"></i></div>
-        <div class="whatsapp-button contact-whatsapp"><i class="fab fa-whatsapp"></i></div>
-        <div class="call-button contact-phone"><i class="fas fa-phone"></i></div>
-        <script>
-            function openSidebar() {
-                document.getElementById("sidebar").style.right = "0";
-            }
-            function closeSidebar() {
-                document.getElementById("sidebar").style.right = "-250px";
-            }
-        </script>
+        <!-- Footer placeholder -->
+        <div id="footer-container"></div>
 
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            window.addEventListener('scroll', function() {
-                const footer = document.querySelector('.services-section');
-                const upButton = document.querySelector('.up-button');
-                
-                const footerRect = footer.getBoundingClientRect();
-                
-                // Check if the footer is in the viewport
-                if (footerRect.top <= window.innerHeight && footerRect.bottom >= 0) {
-                    upButton.classList.add('visible'); // Show the button
-                } else {
-                    upButton.classList.remove('visible'); // Hide the button
-                }
-            });
-        });
-        </script>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const phoneElements = document.querySelectorAll('.contact-phone');
-                const whatsappElements = document.querySelectorAll('.contact-whatsapp');
-        
-                // Phone click event for each phone element
-                phoneElements.forEach(function(phoneElement) {
-                    phoneElement.addEventListener('click', function() {
-                        window.location.href = 'tel:+905376006932'; // Replace with your phone number
-                    });
-                });
-        
-                // WhatsApp click event for each WhatsApp element
-                whatsappElements.forEach(function(whatsappElement) {
-                    whatsappElement.addEventListener('click', function() {
-                        const phoneNumber = '+905376006932'; // Replace with your WhatsApp number
-                        const message = 'Merhaba, yardım almak istiyorum!'; // Default message
-                        window.location.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-                    });
-                });
-            });
-        </script>
-
+        <!-- Load components script -->
+        <script src="js/components.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
     </body>
 </html>
