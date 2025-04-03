@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', async function() {
         });
     }
 }); 
-
 function setupContactButtons() {
+    // Contact button functionality
     const phoneElements = document.querySelectorAll('.contact-phone');
     const whatsappElements = document.querySelectorAll('.contact-whatsapp');
 
@@ -73,5 +73,16 @@ function setupContactButtons() {
             const message = 'Merhaba, yardım almak istiyorum!';
             window.location.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         });
+    });
+
+    // Scroll-to-top button functionality
+    window.addEventListener('scroll', function() {
+        const upButton = document.querySelector('.up-button');
+        
+        if (window.scrollY > 100) {
+            upButton.classList.add('visible'); // Show the button
+        } else {
+            upButton.classList.remove('visible'); // Hide the button
+        }
     });
 }
