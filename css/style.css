@@ -14,30 +14,30 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #e1ad21;
+    background-color: #F1F0E9;
     color: black;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 2vh 2vw;
+    font-size: clamp(15px, 1.5vw, 18px);
 }
 
 .top-bar .contact-info {
     display: flex;
-    gap: 15px;
+    gap: 2vw;
 }
 
 .top-bar .contact-info i {
-    margin-right: 5px;
+    margin-right: 0.1vw;
 }
 
 .top-bar .social-media {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 1vw;
 }
 
 .top-bar .social-media a {
     color: black;
-    font-size: 18px;
+    font-size: clamp(15px, 1.5vw, 18px);
     text-decoration: none;
 }
 
@@ -46,8 +46,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    background-color: rgba(240, 240, 240, 0.95);
+    padding: clamp(10px, 2vh, 20px) clamp(15px, 4vw, 40px);
+    background-color: #41644A;
     color: white;
 }
 
@@ -55,13 +55,14 @@ body {
 .logo-container {
     display: flex;
     align-items: center;
-    padding-left: 4vw;
+    padding-left: 1vw;
 }
 
 .site-logo {
-    max-height: 65px;
+    max-height: clamp(60px, 12vh, 100px);
     width: auto;
-    scale: 1.5;
+    object-fit: contain;
+    display: block;
 }
 
 .nav-links {
@@ -74,7 +75,7 @@ body {
 }
 
 .nav-links a {
-    color: black;
+    color: #F1F0E9;
     text-decoration: none;
     font-size: 18px;
 }
@@ -155,24 +156,24 @@ body {
     width: 100%;
     max-width: 100%;
     position: relative;
-    background-color: #E1AD21;
 }
 
 .carousel {
     width: 100%;
-    height: 80vh;
+    height: 70vh;
 }
 
 
 .carousel-cell {
     width: 100%;
     aspect-ratio: 16 / 9; /* Maintains a responsive aspect ratio */
-    height: 80vh;
+    height: 70vh;
 }
+
 .carousel-cell img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: contain; /* Show the whole image */
 }
 
 @media (max-width:768px) {
@@ -305,6 +306,7 @@ body {
     max-height: 90vh; 
     object-position: top;
 }
+
 .flickity-page-dots {
     transform: translateY(-6vh);
 }
@@ -314,7 +316,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #4d1311;
+    background-color: #0D4715;
     color: white;
     /* padding: 40px 20px; */
 }
@@ -376,7 +378,7 @@ body {
     border-top: 1px solid #8c3c3c;
     padding: 15px;
     font-size: 14px;
-    background-color: #3d0e0c;
+    background-color: #E9762B;
 }
 
 /* Yukarı Çık Butonu */

@@ -56,20 +56,20 @@ document.addEventListener('DOMContentLoaded', async function() {
         });
     }
 }); 
+
 function setupContactButtons() {
-    // Contact button functionality
     const phoneElements = document.querySelectorAll('.contact-phone');
     const whatsappElements = document.querySelectorAll('.contact-whatsapp');
 
     phoneElements.forEach(function(phoneElement) {
         phoneElement.addEventListener('click', function() {
-            window.location.href = 'tel:+905376006932';
+            window.location.href = 'tel:+905428082875';
         });
     });
 
     whatsappElements.forEach(function(whatsappElement) {
         whatsappElement.addEventListener('click', function() {
-            const phoneNumber = '+905376006932';
+            const phoneNumber = '+905428082875';
             const message = 'Merhaba, yardım almak istiyorum!';
             window.location.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         });
