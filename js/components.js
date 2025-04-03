@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded', async function() {
         await loadComponent(component.url, component.targetId);
     }
 
+    // Setup contact buttons after loading components
+    setupContactButtons();
+
     // Load scripts
     const scriptsResponse = await fetch('components/scripts.html');
     if (scriptsResponse.ok) {
@@ -53,3 +56,22 @@ document.addEventListener('DOMContentLoaded', async function() {
         });
     }
 }); 
+
+function setupContactButtons() {
+    const phoneElements = document.querySelectorAll('.contact-phone');
+    const whatsappElements = document.querySelectorAll('.contact-whatsapp');
+
+    phoneElements.forEach(function(phoneElement) {
+        phoneElement.addEventListener('click', function() {
+            window.location.href = 'tel:+905376006932';
+        });
+    });
+
+    whatsappElements.forEach(function(whatsappElement) {
+        whatsappElement.addEventListener('click', function() {
+            const phoneNumber = '+905376006932';
+            const message = 'Merhaba, yardım almak istiyorum!';
+            window.location.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        });
+    });
+}

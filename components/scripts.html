@@ -15,14 +15,14 @@
         // Phone click event for each phone element
         phoneElements.forEach(function(phoneElement) {
             phoneElement.addEventListener('click', function() {
-                window.location.href = 'tel:+905376006932'; // Replace with your phone number
+                window.location.href = 'tel:+905428082875';
             });
         });
 
         // WhatsApp click event for each WhatsApp element
         whatsappElements.forEach(function(whatsappElement) {
             whatsappElement.addEventListener('click', function() {
-                const phoneNumber = '+905376006932'; // Replace with your WhatsApp number
+                const phoneNumber = '+905428082875';
                 const message = 'Merhaba, yardım almak istiyorum!'; // Default message
                 window.location.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             });
