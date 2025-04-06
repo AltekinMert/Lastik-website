@@ -14,6 +14,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
+/* === RESET & GLOBAL === */
 
 /* === TOP BAR === */
 .top-bar {
@@ -146,51 +147,6 @@ body {
 }
 /* === SIDEBAR === */
 
-/* Buraları düzelt */
-.footer-column p{
-    place-self: center;
-}
-.emir{
-    width: 40vw;
-}
-
-/* Mobilde Gizlenmesi İstenen Öğeler */
-@media (max-width: 768px) {
-    .hide-on-mobile {
-        display: none;
-    }
-}
-
-/* Tıklanabilir Telefon & WhatsApp */
-.contact-phone:hover {
-    cursor: pointer;
-}
-
-.contact-whatsapp:hover {
-    cursor: pointer;
-}
-
-/* Mobil Uyumlu Header ve Top Bar */
-@media (max-width: 768px) {
-    .nav-links,
-    .top-bar .contact-info {
-        display: none;
-    }
-    .menu-btn {
-        display: block;
-    }
-    .top-bar {
-        place-content: center;
-    }
-    .flickity-button{
-        display: none !important;
-    }
-    .emir{
-        width: 100vw !important;
-    }
-}
-/* Buraları düzelt */
-
 /* === SLIDER-CAROUSEL */
 .slider {
     width: 100%;
@@ -213,15 +169,6 @@ body {
     object-fit: contain;
     width: 100%;
     height: 100%;
-}
-
-@media (max-width:768px) {
-    .carousel{
-        height: 40vh;
-    }
-    .carousel-cell img{
-        height: auto;
-    }
 }
 /* === SLIDER-CAROUSEL */
 
@@ -337,6 +284,10 @@ body {
 
 .footer-column li a{
     color: #ffffff;
+}
+
+.footer-column p {
+    place-self: center;
 }
 
 .footer-logo {
@@ -463,18 +414,6 @@ body {
 .service-card a:hover {
     text-decoration: none;
 }
-
-@media (max-width: 768px) {
-    .service-details-section h2 {
-        font-size: 1.5rem;
-    }
-    .service-detail header h3 {
-        font-size: 1.1rem;
-    }
-    .service-detail p {
-        font-size: 0.95rem;
-    }
-}
 /* === SERVICE DETAILS === */
 
 /* === ABOUT US === */
@@ -507,18 +446,6 @@ body {
     color: #222;
 }
 
-@media (max-width: 768px) {
-    .about-us-section h2 {
-        font-size: 1.5rem;
-    }
-    .about-us-detail header h3 {
-        font-size: 1.1rem;
-    }
-    .about-us-detail p {
-        font-size: 0.95rem;
-    }
-}
-
 .mission-vision-container {
     display: flex;
     flex-wrap: wrap;
@@ -547,28 +474,96 @@ body {
     line-height: 1.5;
     color: #333;
 }
-
-/* Responsive Ayarlar (Mobil cihazlar için) */
-@media (max-width: 768px) {
-    .mission-vision-container {
-        flex-direction: column; /* Mobilde alt alta gelsinler */
-    }
-
-    .mission,
-    .vision {
-        margin-bottom: 25px; /* Mobilde alt alta boşluk bırak */
-    }
-}
 /* === ABOUT US === */
+
+/* === PHONE-WHATSAPP BUTTONS */
+.contact-phone:hover {
+    cursor: pointer;
+}
+
+.contact-whatsapp:hover {
+    cursor: pointer;
+}
+/* === PHONE-WHATSAPP BUTTONS */
 
 /* === UTILITIES === */
 .scale-down {
     object-fit: contain !important;
     transform: scale(0.8);
 }
+/* === UTILITIES === */
 
+/* === MOBILE === */
 .hide-on-mobile {
     display: none !important;
+}
+
+@media (max-width: 768px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .nav-links,
+    .top-bar .contact-info {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .top-bar {
+        place-content: center;
+    }
+
+    .flickity-button{
+        display: none !important;
+    }
+
+    .emir {
+        width: 100vw !important;
+    }
+
+    .carousel {
+        height: 40vh;
+    }
+
+    .carousel-cell img {
+        height: auto;
+    }
+
+    .service-details-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .service-detail header h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-detail p {
+        font-size: 1rem;
+    }
+
+    .about-us-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-us-detail header h3 {
+        font-size: 1.2rem;
+    }
+
+    .about-us-detail p {
+        font-size: 1rem;
+    }
+
+    .mission-vision-container {
+        flex-direction: column;
+    }
+
+    .mission,
+    .vision {
+        margin-bottom: 5vh;
+    }
 }
 
 @media (min-width: 769px) {
@@ -576,3 +571,10 @@ body {
         display: block !important;
     }
 }
+/* === MOBILE === */
+
+/* Buraları düzelt */
+.emir {
+    width: 40vw;
+}
+/* Buraları düzelt */

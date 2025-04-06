@@ -1,48 +1,98 @@
 <!DOCTYPE html>
 <html lang="tr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Akü Takviye & Değişim</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css">
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aracınızın aküsü mü bitti? Ankara ve çevresinde 7/24 yerinde akü takviye ve değişim hizmeti için hemen arayın."
+    />
+    <title>Akü Takviye & Değişim | 7/24 Hızlı Servis - Ankara</title>
 
-    <body>
-        <!-- Component placeholders -->
-        <div id="top-bar-container"></div>
-        <div id="header-container"></div>
-        <div id="sidebar-container"></div>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Akü Takviye & Değişim | 7/24 Servis - Ankara" />
+    <meta property="og:description" content="Hızlı akü takviye ve değişim hizmetiyle yolda kalmayın. Şimdi iletişime geçin." />
+    <meta property="og:image" content="https://yourwebsite.com/assets/images/akü.png" />
+    <meta property="og:url" content="https://yourwebsite.com/battery-change.html" />
+    <meta property="og:type" content="service" />
 
-        <div class="slider">
-            <div class="carousel" data-flickity='{"wrapAround": true, "autoPlay": 3000}'>
-                <div class="carousel-cell"><img class="scale-down" src="assets/images/akü.png" alt="Image 1"></div>
-                <div class="carousel-cell"><img class="scale-down" src="assets/images/akü.png" alt="Image 2"></div>
-            </div>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Akü Takviye & Değişim | 7/24 Servis - Ankara" />
+    <meta name="twitter:description" content="Yerinde akü takviyesi ve değişimi. Hemen arayın, yolda kalmayın." />
+    <meta name="twitter:image" content="https://yourwebsite.com/assets/images/akü.png" />
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Akü Takviye ve Değişim",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "7/24 Yol Yardım Ankara",
+          "telephone": "+905428082875",
+          "url": "https://yourwebsite.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ankara",
+            "addressRegion": "Ankara",
+            "postalCode": "06000",
+            "addressCountry": "TR"
+          }
+        },
+        "description": "Aracınızın aküsü bittiğinde Ankara'da 7/24 hızlı yerinde akü takviye ve değişim hizmeti sunuyoruz."
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div id="top-bar-container"></div>
+      <div id="header-container"></div>
+    </header>
+
+    <main>
+      <div id="sidebar-container"></div>
+
+      <!-- Slider -->
+      <div class="slider">
+        <div class="carousel" data-flickity='{"wrapAround": true, "autoPlay": 3000}'>
+          <div class="carousel-cell">
+            <img class="scale-down" src="assets/images/akü.png" alt="Akü Takviye Hizmeti" loading="lazy">
+          </div>
+          <div class="carousel-cell">
+            <img class="scale-down" src="assets/images/akü.png" alt="Akü Takviye Hizmeti" loading="lazy">
+          </div>
         </div>
+      </div>
 
-        <!-- Hizmet Detayı Bölümü -->
-        <section class="service-details-section" aria-labelledby="service-details-title">
-            <!--Akü Takviye & Değişim -->
-            <h2 id="service-details-title">Akü Takviye & Değişim</h2>
-            <br>
-            
-            <p itemprop="description">
-                Aracınızın aküsü bitmişse, hızlı akü takviyesiyle tekrar yola devam etmenizi
-                sağlıyoruz. Eğer akü tamamen kullanılamaz durumdaysa, aracınız için uygun akü
-                seçimini yaparak hızlı ve yerinde değişim hizmeti sunuyoruz.
-            </p>
-            </article>
-            <br> 
-        </section>
-        <!-- Hizmet Detayı Bölümü Bitişi -->
-
-        <!-- Footer placeholder -->
-        <div id="footer-container"></div>
-
-        <!-- Load components script -->
-        <script src="js/components.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
-    </body>
+      <!-- Hizmet Detayı -->
+      <section class="service-details-section" aria-labelledby="service-details-title">
+        <h2 id="service-details-title">Akü Takviye & Değişim</h2>
+        <article itemscope itemtype="https://schema.org/Service">
+          <meta itemprop="serviceType" content="Lastik Değişimi ve Onarımı" />
+          <p itemprop="description">
+            Aracınızın aküsü bitmişse, hızlı akü takviyesiyle tekrar yola devam etmenizi
+            sağlıyoruz. Eğer akü tamamen kullanılamaz durumdaysa, aracınız için uygun akü
+            seçimini yaparak hızlı ve yerinde değişim hizmeti sunuyoruz.
+          </p>
+        </article>
+      </section>
+      <!-- Hizmet Detayı Bölümü Bitişi -->
+    </main>
+        
+    <!-- Footer -->
+    <footer>
+      <div id="footer-container"></div>
+    </footer>
+  
+    <!-- Scripts -->
+    <script src="js/components.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
+  </body>
 </html>
