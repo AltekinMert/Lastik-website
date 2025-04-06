@@ -316,6 +316,7 @@ body {
     font-size: 1rem;
     background-color: #E9762B;
 }
+
 /* === FOOTER === */
 
 /* === FIXED BUTTONS === */
@@ -332,12 +333,79 @@ body {
 .call-button, .whatsapp-button, .up-button {
     width: 3.5rem;
     height: 3.5rem;
+
+/* Fixed Buttons Container */
+.fixed-buttons-container {
+    position: fixed;
+    bottom: 10vh;
+    right: 2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 10000;
+}
+
+/* Yukarı Çık Butonu */
+.up-button {
+    background-color: #f5f5f5;
+    color: rgb(0, 0, 0);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    visibility: hidden;
+}
+
+.whatsapp-button {
+    background-color: #25d366;
+    color: rgb(255, 255, 255);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    align-content: center;
+}
+
+.whatsapp-button i {
+    font-size: xx-large;
+    transform: translateY(3px);
+}
+
+.call-button {
+    align-content: center;
+    background-color: #2a46b3;
+    color: rgb(255, 255, 255);
+    width: 60px;
+    height: 60px;
+
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #fff;
     cursor: pointer;
+
+
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.up-button.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+
 }
 
 .call-button {
