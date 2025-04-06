@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ankara'da 7/24 yol yardım hizmetimiz için hemen bizimle iletişime geçin. Telefon, WhatsApp ve iletişim formu ile yanınızdayız."
+    />
+    <title>İletişim | 7/24 Yol Yardım, Lastik ve Akü Servisi - Ankara</title>
+
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="İletişim | 7/24 Yol Yardım - Ankara" />
+    <meta property="og:description" content="Bize ulaşmak için telefon, WhatsApp veya iletişim formunu kullanabilirsiniz. 7/24 hizmetinizdeyiz." />
+    <meta property="og:image" content="https://yourwebsite.com/assets/images/preview.jpg" />
+    <meta property="og:url" content="https://yourwebsite.com/contact.html" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="İletişim | 7/24 Yol Yardım - Ankara" />
+    <meta name="twitter:description" content="Ankara ve çevresinde profesyonel yol yardım hizmeti için hemen iletişime geçin." />
+    <meta name="twitter:image" content="https://yourwebsite.com/assets/images/preview.jpg" />
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.min.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "7/24 Yol Yardım Ankara",
+        "url": "https://yourwebsite.com",
+        "image": "https://yourwebsite.com/assets/images/logo.png",
+        "telephone": "+905428082875",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Ankara",
+          "addressCountry": "TR"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+905428082875",
+          "contactType": "customer service",
+          "availableLanguage": "Turkish"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div id="top-bar-container"></div>
+      <div id="header-container"></div>
+    </header>
+
+    <main>
+      <div id="sidebar-container"></div>
+
+      <!-- Google Maps -->
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195884.30042989203!2d32.59795474475844!3d39.903523298358856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d347d520732db1%3A0xbdc57b0c0842b8d!2sAnkara!5e0!3m2!1str!2str!4v1742898188697!5m2!1str!2str"
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ankara Haritası"
+        ></iframe>
+      </div>
+
+      <!-- Contact Info + Form -->
+      <section class="container" aria-labelledby="contact-section">
+        <!-- Left -->
+        <div class="info-section">
+          <h2 class="title">ANKARA VE ÇEVRESİ YOL YARDIM</h2>
+          <ul class="service-list">
+            <li class="service-item"><p>* OTO YOL YARDIM - YERİNDE HİZMET</p></li>
+            <li class="service-item"><p>* MOBİL LASTİK TAMİRİ</p></li>
+            <li class="service-item"><p>* LASTİK DEĞİŞİMİ</p></li>
+            <li class="service-item"><p>* AKÜ TAKVİYE VE DEĞİŞİMİ</p></li>
+          </ul>
+          <p class="call-text">7/24 KESİNTİSİZ HİZMET İÇİN <span class="highlight">HEMEN ARAYIN</span></p>
+          <a href="tel:+905428082875" class="call-button-mail"><i class="fas fa-phone"></i> Hemen Arayın (+90 542 808 2875)</a>
+          <a href="tel:+905436674974" class="call-button-mail" style="margin-top: 1vh;"><i class="fas fa-phone"></i> Hemen Arayın (+90 543 667 4974)</a>
+          <a href="https://wa.me/905428082875" class="call-button-mail contact-whatsapp" target="_blank" rel="noopener" style="margin-top: 1vh;">
+            <i class="fab fa-whatsapp"></i> WhatsApp ile İletişim
+          </a>
+        </div>
+
+        <!-- Right -->
+        <div class="form-section">
+          <form class="contact-form" aria-label="İletişim Formu">
+            <div class="form-group">
+              <label for="name" class="form-label">Adınız (gerekli)</label>
+              <input type="text" id="name" class="form-input" required />
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">E-posta adresiniz (gerekli)</label>
+              <input type="email" id="email" class="form-input" required />
+            </div>
+            <div class="form-group">
+              <label for="subject" class="form-label">Konu</label>
+              <input type="text" id="subject" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">İletiniz</label>
+              <textarea id="message" rows="6" class="form-textarea"></textarea>
+            </div>
+            <button type="submit" class="submit-button">Gönder</button>
+          </form>
+        </div>
+      </section>
+    </main>
+        
+    <!-- Footer -->
+    <footer>
+      <div id="footer-container"></div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/components.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js"></script>
+  </body>
+</html>
