@@ -1,3 +1,13 @@
+window.openSidebar = () => {
+    const sidebar = document.getElementById("sidebar");
+    if (sidebar) sidebar.style.right = "0";
+};
+  
+window.closeSidebar = () => {
+    const sidebar = document.getElementById("sidebar");
+    if (sidebar) sidebar.style.right = "-250px";
+};
+
 // Function to load component into a specific element
 async function loadComponent(url, targetId) {
     try {
@@ -60,10 +70,17 @@ document.addEventListener('DOMContentLoaded', async function() {
 function setupContactButtons() {
     const phoneElements = document.querySelectorAll('.contact-phone');
     const whatsappElements = document.querySelectorAll('.contact-whatsapp');
+    const altPhoneElements = document.querySelectorAll('.contact-phone-alt');
 
     phoneElements.forEach(function(phoneElement) {
         phoneElement.addEventListener('click', function() {
             window.location.href = 'tel:+905428082875';
+        });
+    });
+
+    altPhoneElements.forEach(function(altPhoneElement) {
+        altPhoneElement.addEventListener('click', function() {
+            window.location.href = 'tel:+905436674974';
         });
     });
 
